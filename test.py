@@ -5,7 +5,55 @@ import random
 from model import Building, Elevator, Floor, Passenger
 
 
-class TestElevators(unittest.TestCase):
+class TestFloorClass(unittest.TestCase):
+
+    def test_constructor(self):
+        with self.assertRaises(ValueError):
+            Floor(None)
+
+    def test_str(self):
+        self.assertEqual(str(Floor("1")),   "(F:  1)")
+        self.assertEqual(str(Floor("LB")),  "(F: LB)")
+        self.assertEqual(str(Floor("100")), "(F: 100)")
+
+
+class TestPassengerClass(unittest.TestCase):
+
+    def test_constructor(self):
+        pass
+
+    def test_elevator_wait_time(self):
+        pass
+
+    def test_elevator_time(self):
+        pass
+
+    def test_str(self):
+        pass
+
+
+class TestBuildingClass(unittest.TestCase):
+
+    def test_constructor(self):
+        pass
+
+    def test_add_passenger(self):
+        pass
+
+    def test_add_passengers(self):
+        pass
+
+    def test_build_elevator(self):
+        pass
+
+    def test_build_elevators(self):
+        pass
+
+    def test_floor_exists(self):
+        pass
+
+
+class CompleteTestElevators(unittest.TestCase):
 
     building = None
 
