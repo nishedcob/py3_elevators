@@ -160,6 +160,10 @@ class Building:
                 return self.floors[middle_idx]
 
     def get_floor_path(self, floor1: Floor, floor2: Floor) -> List[Floor]:
+        if floor1 is None:
+            raise ValueError("Floor 1 can't be None")
+        if floor2 is None:
+            raise ValueError("Floor 2 can't be None")
         idx_floor1 = self.floors.index(floor1)
         idx_floor2 = self.floors.index(floor2)
         if idx_floor1 < idx_floor2:
